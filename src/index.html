@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" type="text/css" href="../node_modules/normalize.css/normalize.css">
+
+</head>
+
+<body>
+  <div class="global-wrapper">
+    <h1>Scraper</h1>
+    <div class="form">
+      <div class="form-group">
+        <label for="url">URL:</label>
+        <input type="text" name="url" class="form__input-text" id="url"
+          value="https://www.notebookcheck-ru.com/Videokarty-v-igrakh-Tablica.14067.0.html">
+      </div>
+      <div class="form-group">
+        <div class="selector-wrapper">
+          <label for="selector">CSS selector:</label>
+          <input type="text" name="selector" class="form__input-text" id="selector"
+            placeholder="#sortierbare_tabelle .fullname a" value="#sortierbare_tabelle .fullname a">
+        </div>
+        <div class="selector-attribute-wrapper">
+          <label for="selector-attribute">attribute:</label>
+          <input type="text" name="selector-attribute" class="form__input-text" id="attribute"
+            placeholder="href, innerText, outerHTML" value="href">
+        </div>
+        <div class="checkbox-wrap">
+          <input type="checkbox" name="second-level-checkbox" class="form__checkbox" id="second-level-checkbox">
+          <label for="second-level-checkbox">click to go dipper <span class="description">(value in attr must be URL -
+              for
+              example attr href in tag a)</span></label>
+        </div>
+      </div>
+      <div class="form-group additional-group hidden">
+        <div class="selector-wrapper">
+          <label for="second-level-selector">Second Level selector:</label>
+          <input type="text" name="second-level-selector" class="form__input-text" id="second-level-selector">
+        </div>
+        <div class="selector-attribute-wrapper">
+          <label for="second-selector-attribute">attribute:</label>
+          <input type="text" name="second-selector-attribute" class="form__input-text" id="second-attribute"
+            placeholder="href, innerText, outerHTML" value="">
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="submit" class="form__submit" id="submit" value="scrap">
+      </div>
+    </div>
+
+  </div>
+  <script src="./renderer.js"></script>
+</body>
+</body>
+
+</html>
